@@ -21,54 +21,54 @@ pygame.mouse.set_visible(False)
 pygame.event.set_grab(True)
 
 
-handTextFont = pygame.font.Font("Blackjack/symtext/Symtext.ttf", 30)
-switchTurnFont = pygame.font.Font("Blackjack/symtext/Symtext.ttf", 40)
-winFont = pygame.font.Font("Blackjack/symtext/Symtext.ttf", 50)
+thirty_font = pygame.font.Font("symtext/Symtext.ttf", 30)
+forty_font = pygame.font.Font("symtext/Symtext.ttf", 40)
+fifty_font = pygame.font.Font("symtext/Symtext.ttf", 50)
 
 
 #TEXTURES
-background_image = pygame.transform.scale(pygame.image.load("Blackjack/img/background.png"), (750, 750))
-mouse_texture = pygame.transform.scale(pygame.image.load("Blackjack/img/mouse.png"), (8, 8))
-back_card_texture = pygame.transform.scale(pygame.image.load("Blackjack/img/back.png"), (96, 128))
-ace_sign_texture = pygame.transform.scale(pygame.image.load("Blackjack/img/ace_sign.png"), (128, 128))
+background_image = pygame.transform.scale(pygame.image.load("img/background.png"), (750, 750))
+mouse_texture = pygame.transform.scale(pygame.image.load("img/mouse.png"), (8, 8))
+back_card_texture = pygame.transform.scale(pygame.image.load("img/back.png"), (96, 128))
+ace_sign_texture = pygame.transform.scale(pygame.image.load("img/ace_sign.png"), (128, 128))
 
 
 chip_textures = [
-    pygame.transform.scale(pygame.image.load("Blackjack/img/chips/ten_chip1.png"), (80, 80)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/chips/fifty_chip1.png"), (80, 80)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/chips/hundred_chip1.png"), (80, 80))
+    pygame.transform.scale(pygame.image.load("img/chips/ten_chip1.png"), (80, 80)),
+    pygame.transform.scale(pygame.image.load("img/chips/fifty_chip1.png"), (80, 80)),
+    pygame.transform.scale(pygame.image.load("img/chips/hundred_chip1.png"), (80, 80))
 ]
 
 chip_clicked_textures = [
-    pygame.transform.scale(pygame.image.load("Blackjack/img/chips/ten_chip2.png"), (80, 80)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/chips/fifty_chip2.png"), (80, 80)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/chips/hundred_chip2.png"), (80, 80))
+    pygame.transform.scale(pygame.image.load("img/chips/ten_chip2.png"), (80, 80)),
+    pygame.transform.scale(pygame.image.load("img/chips/fifty_chip2.png"), (80, 80)),
+    pygame.transform.scale(pygame.image.load("img/chips/hundred_chip2.png"), (80, 80))
 
 ]
 
 button_textures = [
-    pygame.transform.scale(pygame.image.load("Blackjack/img/hit_button1.png"), (200, 75)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/stand_button1.png"), (200, 75)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/restart_button1.png"), (275, 125))
+    pygame.transform.scale(pygame.image.load("img/hit_button1.png"), (200, 75)),
+    pygame.transform.scale(pygame.image.load("img/stand_button1.png"), (200, 75)),
+    pygame.transform.scale(pygame.image.load("img/restart_button1.png"), (275, 125))
 ]
 
 pressed_button_textures = [
-    pygame.transform.scale(pygame.image.load("Blackjack/img/hit_button2.png"), (200, 75)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/stand_button2.png"), (200, 75)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/restart_button2.png"), (275, 125))
+    pygame.transform.scale(pygame.image.load("img/hit_button2.png"), (200, 75)),
+    pygame.transform.scale(pygame.image.load("img/stand_button2.png"), (200, 75)),
+    pygame.transform.scale(pygame.image.load("img/restart_button2.png"), (275, 125))
 ]
 
 card_textures = [
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_1.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_2.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_3.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_4.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_5.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_6.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_7.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_8.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_9.png"), (96, 128)),
-    pygame.transform.scale(pygame.image.load("Blackjack/img/cards/card_10.png"), (96, 128))
+    pygame.transform.scale(pygame.image.load("img/cards/card_1.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_2.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_3.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_4.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_5.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_6.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_7.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_8.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_9.png"), (96, 128)),
+    pygame.transform.scale(pygame.image.load("img/cards/card_10.png"), (96, 128)),
 ]
 
 
@@ -173,7 +173,7 @@ fiftyChip = Button(chip_textures[2], chip_clicked_textures[2], chips, 10, 350)
 aceSign_one = Button
 
 
-starting_cards = [Card(280, 330, True, player_sprites), Card(350, 330, True, player_sprites), Card(280, 20, False, dealer_sprites), Card(350, 20, True, dealer_sprites)]
+starting_cards = [Card(280, 380, True, player_sprites), Card(350, 380, True, player_sprites), Card(280, 20, False, dealer_sprites), Card(350, 20, True, dealer_sprites)]
 
 
 all_player_cards = 1
@@ -383,13 +383,13 @@ while running:
         if player_win == True:
             dealer_sprites.empty()
             player_sprites.empty()
-            screen.blit(winFont.render("Player Wins", False, (255, 255, 255)), (190, 150))
+            screen.blit(forty_font.render("Player Wins", False, (255, 255, 255)), (190, 150))
 
 
         if dealer_win == True:
             dealer_sprites.empty()
             player_sprites.empty()
-            screen.blit(winFont.render("Dealer Wins", False, (255, 255, 255)), (190, 150))
+            screen.blit(forty_font.render("Dealer Wins", False, (255, 255, 255)), (190, 150))
 
 
 
@@ -401,11 +401,15 @@ while running:
         ui_sprites.update()
         chips.update()
 
-        screen.blit(handTextFont.render("Dealer Hand: "+str(dealer_hand), False, (255, 255, 255)), (220, 150))
-        screen.blit(handTextFont.render("Hand: "+str(player_hand), False, (255, 255, 255)), (290, 460))
+        if player_can_bet == True:
+            screen.blit(fifty_font.render("Place Bet", False, (255, 255, 255)), (240, 200))
 
-        screen.blit(switchTurnFont.render("Bet: "+str(player_bet), False, (255, 255, 255)), (10, 650))
-        screen.blit(switchTurnFont.render("Money:  "+str(player_money), False, (255, 255, 255)), (10, 690))
+
+        screen.blit(thirty_font.render("Dealer Hand: "+str(dealer_hand), False, (255, 255, 255)), (230, 150))
+        screen.blit(thirty_font.render("Hand: "+str(player_hand), False, (255, 255, 255)), (290, 510))
+
+        screen.blit(thirty_font.render("Bet: "+str(player_bet), False, (255, 255, 255)), (10, 650))
+        screen.blit(thirty_font.render("Money:  "+str(player_money), False, (255, 255, 255)), (10, 690))
 
 
         chips.draw(screen)
